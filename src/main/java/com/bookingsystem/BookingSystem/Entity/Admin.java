@@ -1,5 +1,7 @@
 package com.bookingsystem.BookingSystem.Entity;
 
+import com.bookingsystem.BookingSystem.Config.StrongPassword;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -36,6 +38,13 @@ public class Admin implements UserDetails {
     @NotNull(message = "Input a valid email address")
     @Column(name = "email",unique = true, nullable = false)
     private String email;
+
+    @JsonIgnore
+    @NotBlank(message = "Password required")
+    @NotNull(message = "password required")
+    @StrongPassword
+    @Column(name = "password")
+    private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;

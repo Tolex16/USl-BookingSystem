@@ -17,9 +17,19 @@ public class Ticket {
     @Column(name = "ticket_id")
     private Long ticketId;
 
-    private boolean isIssued;
-
     private String ticketNo;
 
+    private String bookingDate;
 
+    private String bookingTime;
+
+    private String estimatedDuration;
+
+    @ManyToOne
+    @JoinColumn(name = "passenger_id")
+    private Passengers passenger;
+
+    @ManyToOne
+    @JoinColumn(name = "route_id")
+    private Routes route;
 }

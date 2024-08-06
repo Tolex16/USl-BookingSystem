@@ -40,7 +40,8 @@ public class Operator implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-//    private Routes routes;
+    @ManyToMany(mappedBy = "operators")
+    private List<Routes> routes;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

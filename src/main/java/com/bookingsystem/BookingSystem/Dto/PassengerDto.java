@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
@@ -35,5 +37,6 @@ public class PassengerDto {
     @StrongPassword
     private String password;
 
+    private List<Long> ticketIds;
 
 }
