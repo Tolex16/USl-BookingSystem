@@ -21,7 +21,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Builder
 @Table(name = "Passengers")
 public class Passengers implements UserDetails {
 
