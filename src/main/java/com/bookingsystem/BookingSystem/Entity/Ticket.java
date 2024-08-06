@@ -25,11 +25,20 @@ public class Ticket {
 
     private String estimatedDuration;
 
+    @Column(name = "seat_number")
+    private String seatNumber;
+
+    @Column(name = "price")
+    private double price;
+
+    @Column(name = "status")
+    private String status;
+
     @ManyToOne
-    @JoinColumn(name = "passenger_id")
+    @JoinColumn(name = "passenger_id", nullable = false)
     private Passengers passenger;
 
     @ManyToOne
-    @JoinColumn(name = "route_id")
+    @JoinColumn(name = "route_id", nullable = false)
     private Routes route;
 }

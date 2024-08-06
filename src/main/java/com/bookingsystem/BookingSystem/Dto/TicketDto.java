@@ -1,5 +1,6 @@
 package com.bookingsystem.BookingSystem.Dto;
 
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +18,12 @@ public class TicketDto {
     private String bookingTime;
 
     private String estimatedDuration;
+
+    private String seatNumber;
+
+    private double price;
+
+    private String status;
 
     private Long passengerId;
 

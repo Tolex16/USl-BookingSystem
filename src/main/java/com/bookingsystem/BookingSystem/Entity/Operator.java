@@ -25,8 +25,8 @@ public class Operator implements UserDetails {
     private Long operatorId;
 
     @NotBlank(message = "Entry cannot be blank")
-    @Column(name = "first_Name")
-    private String fullName;
+    @Column(name = "driver_Name")
+    private String driverName;
 
     @Email(message = "Input a valid email address")
     @NotNull(message = "Input a valid email address")

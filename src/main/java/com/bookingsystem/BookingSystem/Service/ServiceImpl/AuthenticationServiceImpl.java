@@ -167,7 +167,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         try {
             Operator operator = new Operator();
 
-            operator.setFullName(operatorDto.getFullName());
+            operator.setDriverName(operatorDto.getDriverName());
             operator.setEmail(operatorDto.getEmail());
             operator.setBusModel(operatorDto.getBusModel());
             operator.setSeating(operatorDto.getSeating());

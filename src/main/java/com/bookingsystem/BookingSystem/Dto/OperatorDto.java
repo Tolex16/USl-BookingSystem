@@ -16,7 +16,7 @@ import java.util.List;
 public class OperatorDto {
     private Long operatorId;
 
-    private String fullName;
+    private String driverName;
 
     @Email(message = "Input a valid email address")
     private String email;
